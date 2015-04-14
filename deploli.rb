@@ -15,8 +15,9 @@ get '/submit' do
   cmd = APPS[app]['envs'][env][params[:op]]
   if cmd
     op_file = "#{lolis_path}/#{params[:loli]}.op"
-    `touch #{op_file}`
-    `echo #{Time.now.localtime.strftime("%Y%m%d%H%M%S")}: #{params[:op]} >> #{op_file}`
+    `mkdir -p #{lolis_path}`
+    `touch "#{op_file}"`
+    `echo "#{Time.now.localtime.strftime("%Y%m%d%H%M%S")}: #{params[:op]}" >> #{op_file}`
     @detail = `#{cmd}`
     `echo "#{@detail}" >> #{op_file}`
     @detail = @detail.gsub("\n", "<br/>")
