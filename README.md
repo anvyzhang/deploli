@@ -1,5 +1,8 @@
 # Screens
 
+![Dashboard][2]
+![Deploy Message][3]
+
 # Deploy
 
 * select a private deploy server, can only accessed by you
@@ -13,3 +16,6 @@
 
 * Mina: [http://nadarei.co/mina](https://github.com/mina-deploy/mina)
 * Capistrano: [http://capistranorb.com](http://capistranorb.com)
+
+  [2]: http://segmentfault.com/img/bVlnp6/view
+  [3]: http://segmentfault.com/img/bVlnp8/view
