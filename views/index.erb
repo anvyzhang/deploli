@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Deploli
+  </title>
+  <link rel="stylesheet" href="/main.css" type="text/css">
+  <link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body>
+<div class="content">
+<% APPS.each do |app, app_info| %>
+  <div class="app_name">
+    <b><%= app %></b>
+  </div>
+  <div>
+    <% app_info['envs'].each do |env, env_info| %>
+      <div class="envs">
+        <b><%= env %></b>
+        <div class="ops">
+          <a href="/submit?op=deploy&loli=<%= "#{app}__#{env}"%>">DEPLOY</a>&nbsp;|&nbsp;
+          <a href="/submit?op=stop&loli=<%= "#{app}__#{env}"%>">STOP</a>&nbsp;|&nbsp;
+          <a href="/submit?op=start&loli=<%= "#{app}__#{env}"%>">START</a>&nbsp;|&nbsp;
+          <a href="/submit?op=restart&loli=<%= "#{app}__#{env}"%>">RESTART</a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+</div>
+</body>
+</html>
