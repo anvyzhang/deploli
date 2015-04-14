@@ -17,5 +17,5 @@
 * Mina: [http://nadarei.co/mina](https://github.com/mina-deploy/mina)
 * Capistrano: [http://capistranorb.com](http://capistranorb.com)
 
-  [2]: /img/bVlnp6
-  [3]: /img/bVlnp8
+  [2]: http://segmentfault.com/img/bVlnp6
+  [3]: http://segmentfault.com/img/bVlnp8
