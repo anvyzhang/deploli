@@ -6,7 +6,7 @@
 # Deploy
 
 * select a private deploy server, can only accessed by you
-* install ruby
+* install ruby(1.9 or above)
 * gem install sinatra
 * clone this repo
 * cp config.sample.rb to config.rb and edit config.rb
