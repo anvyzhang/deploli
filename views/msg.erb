@@ -11,14 +11,30 @@
 <div class="content">
   <div class="msg">
     <%= params[:loli] %><br/>
-    <%= @msg %></br>
+    <%= @msg.to_s %></br>
     <a href="/">[Home]</a>
-    <% if @detail.to_s.size > 0 %>
       <div class="msg_detail">
-        <%= @detail %>
       </div>
-    <% end %>
   </div>
 </div>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+  var loli = "<%= params[:loli] %>";
+  $(function(){
+    setInterval(getStatus, 3000);
+  });
+  var container = $(".msg_detail")
+  function getStatus(){
+    $.ajax({
+      type: 'GET',
+      url: '/sub_status',
+      data: {'loli': loli},
+      success: function(data){
+        container.text(data);
+        container.scrollTop(10000);
+      }
+    });
+  }
+</script>
 </body>
 </html>
